@@ -25,12 +25,12 @@ export default function Home() {
       <Features />
       <Video />
       <Brands />
-      <AboutSectionOne />
-      <AboutSectionTwo />
+      <AboutSectionOne layout={"right"}/>
+      <AboutSectionOne layout={"left"}/>
+      {/* <AboutSectionTwo /> */}
       <Testimonials />
-      <Pricing />
+      {/* <Pricing /> */}
       <Blog />
-      <Contact />
     </>
   );
 }

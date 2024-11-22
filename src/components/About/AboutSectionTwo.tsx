@@ -12,16 +12,10 @@ const AboutSectionTwo = () => {
               data-wow-delay=".15s"
             >
               <Image
-                src={getImagePath("/images/about/about-image-2.svg")}
+                src={getImagePath("/images/about/about-image.png")}
                 alt="about image"
                 fill
                 className="drop-shadow-three dark:hidden dark:drop-shadow-none"
-              />
-              <Image
-                src={getImagePath("/images/about/about-image-2-dark.svg")}
-                alt="about image"
-                fill
-                className="hidden drop-shadow-three dark:block dark:drop-shadow-none"
               />
             </div>
           </div>
@@ -29,33 +23,52 @@ const AboutSectionTwo = () => {
             <div className="max-w-[470px]">
               <div className="mb-9">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Bug free code
+                About Us
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Welcome to Neural Netics—where intelligence meets innovation. At Neural Netics, we are committed to developing cutting-edge data scraping and automation solutions that empower businesses and professionals to unlock the full potential of data.
+                </p> <br />
+                <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                Our products, including Google Search Scraper, Google Maps Scraper, Document Data Scraper, and more, are designed to simplify data extraction and turn complex information into actionable insights.
                 </p>
               </div>
+              
               <div className="mb-9">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Premier support
+                Our Mission
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt.
-                </p>
-              </div>
-              <div className="mb-1">
-                <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Next.js
-                </h3>
-                <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt
-                  consectetur adipiscing elit setim.
-                </p>
+                Our mission is to revolutionize the way you interact with data. We strive to create powerful, efficient, and user-friendly tools that adapt to various industries and applications.
+                </p> <br />
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="grid grid-cols-2 gap-8 my-10">
+            <div className="mb-9">
+              <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
+              What We Do
+              </h3>
+              <ul className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                <li><b>Data Scraping Solutions:</b> Extract valuable information from sources like Google Search and Google Maps to drive informed decision-making.</li>
+                <li><b>Document Data Extraction:</b> Seamlessly gather and organize data from PDFs, Excel files, and other document formats.</li>
+                <li><b>Automation Tools:</b> Streamline workflows and enhance productivity by automating repetitive tasks.</li>
+                <li><b>Custom Solutions:</b> Offer tailored software development to meet your unique business needs.</li>
+              </ul>
+            </div>
+
+            <div className="mb-9">
+              <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
+              Why Choose Neural Netics
+              </h3>
+              <ul className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                <li><b>Innovation:</b> We are at the forefront of technological advancements, continually updating our products to meet evolving industry demands.</li>
+                <li><b>Expertise:</b> Our team consists of seasoned professionals with extensive experience in data science, machine learning, and software development.</li>
+                <li><b>Customer-Centric Approach:</b> We prioritize your needs, offering exceptional support and services to ensure your success.</li>
+                <li><b>Ethical Practices:</b> Committed to responsible data usage, we adhere to all legal guidelines and promote ethical standards in data handling.</li>
+              </ul>
+            </div>
         </div>
       </div>
     </section>

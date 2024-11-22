@@ -41,7 +41,7 @@ const AboutSectionThree = () => {
                   Our Mission
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Our mission is to revolutionize the way you interact with data. We strive to create powerful, efficient, and user-friendly tools that adapt to various industries and applications. By leveraging advanced technologies and intelligent algorithms, we help you stay ahead in today's competitive digital landscape.
+                  Our mission is to revolutionize the way you interact with data. We strive to create powerful, efficient, and user-friendly tools that adapt to various industries and applications. By leveraging advanced technologies and intelligent algorithms, we help you stay ahead in today&apos;s competitive digital landscape.
                 </p>
               </div>
             </div>

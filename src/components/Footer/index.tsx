@@ -182,7 +182,7 @@ const Footer = () => {
                       href="/contact"
                       className="mb-4 flex items-center text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      <FaWhatsapp className="text-2xl mr-2 text-green-500"/> What'sApp
+                      <FaWhatsapp className="text-2xl mr-2 text-green-500"/> What&apos;sApp
                     </Link>
                   </li>
                   <li>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import NewsLatterBox from "./NewsLatterBox";
 
 const Contact = () => {
@@ -75,7 +76,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="w-full px-4 lg:w-5/12 xl:w-4/12">
-            <img src={"/images/contact/contact.png"} className="w-full"/>
+            <Image width={450} height={600} alt="contact" src={"/images/contact/contact.png"} className="w-full"/>
           </div>
         </div>
       </div>

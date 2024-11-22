@@ -9,8 +9,7 @@ const nextConfig = {
         port: "",
       },
     ],
-  },
-  basePath: "/codecanyon/next",
+  }
   // output: "export"
 };
 

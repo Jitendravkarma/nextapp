@@ -1,0 +1,1 @@
+export const getImagePath = (path: string): string => `${process.env.BASE_PATH || ''}${path}`;

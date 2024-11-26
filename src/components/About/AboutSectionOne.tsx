@@ -28,8 +28,8 @@ const AboutSectionOne = ({layout}) => {
               <>
                 <div className="w-full px-4 lg:w-1/2">
                   <SectionTitle
-                    title="I Coupon World"
-                    paragraph="The main ‘thrust’ is to focus on educating attendees on how to best protect highly vulnerable business applications with interactive panel discussions and roundtables."
+                    title="Comprehensive Data Sources"
+                    paragraph="Extract data from multiple platforms, including"
                     mb="44px"
                   />
 
@@ -39,15 +39,15 @@ const AboutSectionOne = ({layout}) => {
                   >
                     <div className="mx-[-12px] flex flex-wrap">
                       <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                        <List text="Premium quality" />
-                        <List text="Tailwind CSS" />
-                        <List text="Use for lifetime" />
+                        <List text="Google Search" />
+                        <List text="Google Maps" />
+                        <List text="From Websites" />
                       </div>
 
                       <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                        <List text="Next.js" />
-                        <List text="Rich documentation" />
-                        <List text="Developer friendly" />
+                        <List text="From Documents" />
+                        <List text="From Images" />
+                        <List text="From Directories" />
                       </div>
                     </div>
                   </div>

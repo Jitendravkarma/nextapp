@@ -4,45 +4,30 @@ import { getImagePath } from "../image_basepath";
 const blogData: Blog[] = [
   {
     id: 1,
-    title: "Best UI components for modern websites",
+    title: "Google Search Scraper",
     paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
+      "Effortlessly collect valuable business information by searching Google for company websites, email addresses, phone numbers, and other essential data using this powerful web scraper tool.",
     image: getImagePath("/images/blog/blog-01.jpg"),
-    author: {
-      name: "Samuyl Joshi",
-      image: getImagePath("/images/blog/author-01.png"),
-      designation: "Graphic Designer",
-    },
-    tags: ["creative"],
-    publishDate: "2025",
+    videoURL:"https://www.youtube.com/watch?v=xJsktXJfZZ8",
+    demoURL:"https://webcrawlerspider.com/signup"
   },
   {
     id: 2,
-    title: "9 simple ways to improve your design skills",
+    title: "Google Maps Scraper",
     paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
+      "Maximize your business outreach by extracting contact details, including emails, phone numbers, and websites from Google Maps using this advanced scraping tool for better targeting results.",
     image: getImagePath("/images/blog/blog-02.jpg"),
-    author: {
-      name: "Musharof Chy",
-      image: getImagePath("/images/blog/author-02.png"),
-      designation: "Content Writer",
-    },
-    tags: ["computer"],
-    publishDate: "2025",
+    videoURL:"https://www.youtube.com/watch?v=BhI2KKoSj3Y",
+    demoURL:"https://webcrawlerspider.com/signup"
   },
   {
     id: 3,
-    title: "Tips to quickly improve your coding speed.",
+    title: "Website Data Scraper",
     paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
+      "Leverage our efficient data scraping software to gather vast amounts of country-specific web records, including domain names, contact emails, and phone numbers for research purposes.",
     image: getImagePath("/images/blog/blog-03.jpg"),
-    author: {
-      name: "Lethium Deo",
-      image: getImagePath("/images/blog/author-03.png"),
-      designation: "Graphic Designer",
-    },
-    tags: ["design"],
-    publishDate: "2025",
+    videoURL:"https://www.youtube.com/watch?v=_sXWe4U2Cz8",
+    demoURL:"https://webcrawlerspider.com/signup"
   },
 ];
 export default blogData;

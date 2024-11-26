@@ -24,12 +24,8 @@ export default function Home() {
       <Hero />
       <Features />
       <Video />
-      <Brands />
       <AboutSectionOne layout={"right"}/>
       <AboutSectionOne layout={"left"}/>
-      {/* <AboutSectionTwo /> */}
-      <Testimonials />
-      {/* <Pricing /> */}
       <Blog />
     </>
   );

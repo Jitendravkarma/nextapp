@@ -24,6 +24,12 @@ const menuData: Menu[] = [
     title: "Contact",
     path: "/contact",
     newTab: false,
+  },
+  {
+    id: 5,
+    title: "Free Trial",
+    path: "https://webcrawlerspider.com/signup",
+    newTab: false,
   }
 ];
 export default menuData;

@@ -1,11 +1,13 @@
+import Image from "next/image";
 import Link from "next/link";
+import Carousel from "./Carousel";
 
 const Hero = () => {
   return (
     <>
       <section
         id="home"
-        className="relative z-10 overflow-hidden bg-white pb-16 pt-[120px] dark:bg-gray-dark md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
+        className="relative z-10 bg-white pb-16 pt-[120px] dark:bg-gray-dark md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px] mb-48 sm:mb-60 md:mb-72 lg:mb-96 xl:mb-[28rem]"
       >
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
@@ -278,6 +280,11 @@ const Hero = () => {
             </defs>
           </svg>
         </div>
+        
+        {/* carousel */}
+        <Carousel/>
+        {/* carousel */}
+        
       </section>
     </>
   );

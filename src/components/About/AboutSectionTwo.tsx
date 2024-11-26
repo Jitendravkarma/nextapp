@@ -23,10 +23,10 @@ const AboutSectionTwo = () => {
             <div className="max-w-[470px]">
               <div className="mb-9">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                About Us
+                Innovative Solutions
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                Welcome to Neural Netics—where intelligence meets innovation. At Neural Netics, we are committed to developing cutting-edge data scraping and automation solutions that empower businesses and professionals to unlock the full potential of data.
+                Welcome to Neural Netics—where intelligence meets innovation. At Neural Netics, we are committed to developing advanced data scraping and automation solutions that empower businesses and professionals to unlock the full potential of data.
                 </p> <br />
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
                 Our products, including Google Search Scraper, Google Maps Scraper, Document Data Scraper, and more, are designed to simplify data extraction and turn complex information into actionable insights.
@@ -45,7 +45,7 @@ const AboutSectionTwo = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-8 my-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-10">
             <div className="mb-9">
               <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
               What We Do

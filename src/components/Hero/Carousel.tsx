@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import Image from 'next/image';
 
 const Carousel = () => {
   const images = [
@@ -35,12 +36,12 @@ const Carousel = () => {
           >
             {images.map((src, index) => (
               <SwiperSlide key={index}>
-                <img
+                <Image
                   src={src}
                   alt={`Dashboard ${index + 1}`}
+                  width={1200}
+                  height={500}
                   style={{
-                    width: '100%',
-                    height: 'auto',
                     borderRadius: '10px',
                     boxShadow: '0 4px 15px rgba(0, 0, 0, 0.2)',
                   }}

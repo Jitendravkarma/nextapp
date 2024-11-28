@@ -1,10 +1,10 @@
 import { Metadata } from "next";
 import Breadcrumb from "@/components/Common/Breadcrumb";
-import SharePost from "@/components/Blog/SharePost";
-import TagButton from "@/components/Blog/TagButton";
 import Image from "next/image";
 import { getImagePath } from "@/components/image_basepath";
-import Link from "next/link";
+import { FaPrint } from "react-icons/fa";
+import TableContext from "@/components/Terms/tableContext";
+import Print from "@/components/Terms/print";
 
 export const metadata: Metadata = {
   title: "About Page | Free Next.js Template for Startup and SaaS",
@@ -12,31 +12,13 @@ export const metadata: Metadata = {
   // other metadata
 };
 
-const Blog = ({heading, description})=>{
-  return (
-    <div className="flex flex-col gap-3 my-10">
-      <h4 className="text-gray-700">{heading}</h4>
-      <p>
-        {description}
-      </p>
-    </div>
-  )
-}
-
 const Terms = () => {
   interface Data {
     heading: string;
     description: string;
   }
+  
   const content: Data[] = [
-    {
-      heading: "Last Updated: 25-11-2024",
-      description: "Welcome to Neural Netics! These Terms and Conditions 'Terms' govern your access to and use of our website and products, including our multi-scraping tools. By registering, logging in, purchasing access, and using our tools, you agree to abide by these Terms. Please read them carefully."
-    },
-    {
-      heading: "Acceptance of Terms",
-      description: "Welcome to Neural Netics! These Terms and Conditions 'Terms' govern your access to and use of our website and products, including our multi-scraping tools. By registering, logging in, purchasing access, and using our tools, you agree to abide by these Terms. Please read them carefully."
-    },
     {
       heading: "Registration and Account",
       description: "Users are required to register, verify their email, and log in to access our tools. During registration, users must provide accurate and up-to-date information. We do not store passwords. Authentication is conducted securely using encrypted methods to ensure your privacy., Users are responsible for maintaining the confidentiality of their accounts and all activities performed under their account."
@@ -67,9 +49,61 @@ const Terms = () => {
     },
     {
       heading: "Contact",
-      description: "For any questions or concerns, please contact us at [Insert Contact Email]."
+      description: "For any questions or concerns, please contact us at support@neuralnetics.io."
     }
   ];
+
+  const tableData = [
+    {title: "Our Services", description:"Our services encompass a wide range of tools and solutions designed to meet the needs of our users. These include digital tools for data extraction, lead generation, and web development resources, such as templates, scripts, and design assets. We also provide customized services tailored to individual requirements, along with reliable customer support to address technical issues and inquiries."},
+    {title: "User Registration", description:
+      <span>
+        To access and use our services, users are required to complete the registration process by providing accurate and up-to-date information. As part of this process, we collect and securely store specific details, including your name, email address, phone number, and address. Your name helps us identify and personalize your experience, while your email address is used for communication purposes, such as sending updates, notifications, and support-related messages. We use your phone number to facilitate direct communication and verification when necessary, and your address is stored to ensure proper service delivery and to accommodate any location-specific requirements.
+        <br />
+        By submitting this information during registration, you consent to its collection, storage, and use in compliance with our privacy policy. It is your responsibility to ensure the accuracy of the information provided and to update it whenever necessary. Providing inaccurate or outdated details may result in restricted access to our services.
+      </span>
+    },
+    {title: "Purchase and Payment", description:
+      <span>
+        When making a purchase or completing a payment on our platform, you agree to provide accurate and complete payment details to ensure the successful processing of your transaction. We collect and securely store necessary information, such as billing details, transaction records, and payment confirmation data, in accordance with our privacy policy and applicable legal standards.
+        <br />
+        All payments are processed through secure channels, and we utilize PayU Money as our payment gateway to facilitate transactions. It is the user&apos;s responsibility to ensure that the payment method used is valid, and sufficient funds are available to complete the transaction. In the event of a failed payment, access to the purchased services or products may be restricted until the issue is resolved.
+        <br />
+        We reserve the right to modify prices, apply taxes, or introduce additional charges as required. By completing a payment, you acknowledge and accept these terms and agree that all purchases are subject to our refund and cancellation policies.
+      </span>
+    },
+    {title: "Subcriptions", description:
+      <span>
+        We offer flexible subscription plans to cater to the diverse needs of our users. You have the option to choose from monthly, six-month, or annual subscription plans based on your preferences and requirements. Each subscription grants you access to our services and features as outlined during the sign-up process.
+        <br />
+        By selecting a subscription plan, you agree to make timely payments for the chosen duration. Subscriptions are billed in advance, and the payment amount depends on the plan you select. For ease of use, all payments are processed securely, with the option to renew your subscription automatically at the end of the billing period, unless canceled prior to the renewal date.
+        <br />
+        You may upgrade, downgrade, or cancel your subscription at any time, subject to the terms outlined in our refund and cancellation policy. We recommend reviewing your subscription details regularly to ensure they align with your usage and preferences. By subscribing, you agree to these terms and conditions as part of your continued access to our services.
+      </span>
+    },
+    {title: "Privacy Policy", description:
+      <span>
+        We are committed to protecting your personal information and ensuring transparency in how we handle your data. Our privacy policies outline the details of data collection, usage, storage, and security measures we take to safeguard your information.
+        <br />
+        We encourage you to review our privacy policy to better understand your rights and our practices. You can easily access it by navigating to the Privacy Policy section on our website. By using our platform, you acknowledge and agree to the terms stated in our privacy policy.
+      </span>
+    },
+    {title: "User Data", description:
+      <span>
+        We prioritize the secure collection and storage of user data to provide a seamless and personalized experience on our platform. The details we save include your name, email address, phone number, and address. These details are essential for identification, communication, and service delivery.
+        <br />
+        Your name helps us personalize your experience, while your email address is used for account-related notifications, updates, and customer support. The phone number facilitates direct communication or verification when needed, and your address is stored to fulfill any location-specific service requirements.
+        <br />
+        By using our platform, you consent to the collection and storage of this data in accordance with our privacy policy, ensuring compliance with data protection standards. It is your responsibility to ensure the accuracy and currency of the information provided.
+      </span>
+    },
+    {title: "Contact us", description:
+      <span>
+        We value open communication and are here to assist you with any questions, concerns, or support requests related to our services. If you need to reach out to us, you can do so through the contact details provided below or on our website.
+        <br />
+        You can email us directly at <b>support@designcollection.com</b> for any assistance or inquiries. Our team is committed to responding promptly and ensuring a smooth user experience. For more detailed information or specific concerns, please navigate to the Contact Us section on our website. We look forward to hearing from you and assisting in any way we can.
+      </span>
+    }
+  ]
   return (
     <>
       <Breadcrumb
@@ -111,12 +145,7 @@ const Terms = () => {
                     </div>
                   </div>
                   <div className="mb-5">
-                    <a
-                      href="#0"
-                      className="inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white"
-                    >
-                      Design
-                    </a>
+                    <Print/>
                   </div>
                 </div>
                 <div>
@@ -141,224 +170,39 @@ const Terms = () => {
 
                   These Legal Terms constitute a legally binding agreement made between you, whether personally or on behalf of an entity, and Neural Netics, concerning your access to and use of the Services. You agree that by accessing the Services, you have read, understood, and agreed to be bound by all of these Legal Terms. IF YOU DO NOT AGREE WITH ALL OF THESE LEGAL TERMS, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE SERVICES AND YOU MUST DISCONTINUE USE IMMEDIATELY.
                   </p>
-                  <h3 className="font-xl mb-10 font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight">
-                    Table of contents
-                  </h3>
-                  {/* <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    consectetur adipiscing elit in voluptate velit esse cillum
-                    dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                    mattis vulputate cupidatat.
-                  </p> */}
-                  <ul className="mb-10 list-inside list-disc text-body-color">
-                    <li className="mb-2 text-base font-medium text-primary underline sm:text-lg lg:text-base xl:text-lg">
-                      <Link href={"terms"} target="_blank">
-                        Our Services
-                      </Link>
-                    </li>
-                    <li className="mb-2 text-base font-medium text-primary underline sm:text-lg lg:text-base xl:text-lg">
-                      <Link href={"terms"} target="_blank">
-                        User Registration
-                      </Link>
-                    </li>
-                    <li className="mb-2 text-base font-medium text-primary underline sm:text-lg lg:text-base xl:text-lg">
-                      <Link href={"terms"} target="_blank">
-                        Purchase and Payment
-                      </Link>
-                    </li>
-                    <li className="mb-2 text-base font-medium text-primary underline sm:text-lg lg:text-base xl:text-lg">
-                      <Link href={"terms"} target="_blank">
-                        Subcriptions
-                      </Link>
-                    </li>
-                    <li className="mb-2 text-base font-medium text-primary underline sm:text-lg lg:text-base xl:text-lg">
-                      <Link href={"terms"} target="_blank">
-                        Privacy Policy
-                      </Link>
-                    </li>
-                    <li className="mb-2 text-base font-medium text-primary underline sm:text-lg lg:text-base xl:text-lg">
-                      <Link href={"terms"} target="_blank">
-                        User Data
-                      </Link>
-                    </li>
-                    <li className="mb-2 text-base font-medium text-primary underline sm:text-lg lg:text-base xl:text-lg">
-                      <Link href={"terms"} target="_blank">
-                        Contact Us
-                      </Link>
-                    </li>
-                  </ul>
-                  <div className="relative z-10 mb-10 overflow-hidden rounded-md bg-primary bg-opacity-10 p-8 md:p-9 lg:p-8 xl:p-9">
-                    <p className="text-center text-base font-medium italic text-body-color">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod incididunt utionals labore et dolore magna
-                      aliqua. Quis lobortis scelerisque fermentum, The Neque ut
-                      etiam sit amet.
-                    </p>
-                    <span className="absolute left-0 top-0 z-[-1]">
-                      <svg
-                        width="132"
-                        height="109"
-                        viewBox="0 0 132 109"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          opacity="0.5"
-                          d="M33.0354 90.11C19.9851 102.723 -3.75916 101.834 -14 99.8125V-15H132C131.456 -12.4396 127.759 -2.95278 117.318 14.5117C104.268 36.3422 78.7114 31.8952 63.2141 41.1934C47.7169 50.4916 49.3482 74.3435 33.0354 90.11Z"
-                          fill="url(#paint0_linear_111:606)"
-                        />
-                        <path
-                          opacity="0.5"
-                          d="M33.3654 85.0768C24.1476 98.7862 1.19876 106.079 -9.12343 108.011L-38.876 22.9988L100.816 -25.8905C100.959 -23.8126 99.8798 -15.5499 94.4164 0.87754C87.5871 21.4119 61.9822 26.677 49.5641 38.7512C37.146 50.8253 44.8877 67.9401 33.3654 85.0768Z"
-                          fill="url(#paint1_linear_111:606)"
-                        />
-                        <defs>
-                          <linearGradient
-                            id="paint0_linear_111:606"
-                            x1="94.7523"
-                            y1="82.0246"
-                            x2="8.40951"
-                            y2="52.0609"
-                            gradientUnits="userSpaceOnUse"
-                          >
-                            <stop stopColor="white" stopOpacity="0.06" />
-                            <stop
-                              offset="1"
-                              stopColor="white"
-                              stopOpacity="0"
-                            />
-                          </linearGradient>
-                          <linearGradient
-                            id="paint1_linear_111:606"
-                            x1="90.3206"
-                            y1="58.4236"
-                            x2="1.16149"
-                            y2="50.8365"
-                            gradientUnits="userSpaceOnUse"
-                          >
-                            <stop stopColor="white" stopOpacity="0.06" />
-                            <stop
-                              offset="1"
-                              stopColor="white"
-                              stopOpacity="0"
-                            />
-                          </linearGradient>
-                        </defs>
-                      </svg>
-                    </span>
-                    <span className="absolute bottom-0 right-0 z-[-1]">
-                      <svg
-                        width="53"
-                        height="30"
-                        viewBox="0 0 53 30"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <circle
-                          opacity="0.8"
-                          cx="37.5"
-                          cy="37.5"
-                          r="37.5"
-                          fill="#4A6CF7"
-                        />
-                        <mask
-                          id="mask0_111:596"
-                          style={{ maskType: "alpha" }}
-                          maskUnits="userSpaceOnUse"
-                          x="0"
-                          y="0"
-                          width="75"
-                          height="75"
-                        >
-                          <circle
-                            opacity="0.8"
-                            cx="37.5"
-                            cy="37.5"
-                            r="37.5"
-                            fill="#4A6CF7"
-                          />
-                        </mask>
-                        <g mask="url(#mask0_111:596)">
-                          <circle
-                            opacity="0.8"
-                            cx="37.5"
-                            cy="37.5"
-                            r="37.5"
-                            fill="url(#paint0_radial_111:596)"
-                          />
-                          <g opacity="0.8" filter="url(#filter0_f_111:596)">
-                            <circle
-                              cx="40.8089"
-                              cy="19.853"
-                              r="15.4412"
-                              fill="white"
-                            />
-                          </g>
-                        </g>
-                        <defs>
-                          <filter
-                            id="filter0_f_111:596"
-                            x="4.36768"
-                            y="-16.5881"
-                            width="72.8823"
-                            height="72.8823"
-                            filterUnits="userSpaceOnUse"
-                            colorInterpolationFilters="sRGB"
-                          >
-                            <feFlood
-                              floodOpacity="0"
-                              result="BackgroundImageFix"
-                            />
-                            <feBlend
-                              mode="normal"
-                              in="SourceGraphic"
-                              in2="BackgroundImageFix"
-                              result="shape"
-                            />
-                            <feGaussianBlur
-                              stdDeviation="10.5"
-                              result="effect1_foregroundBlur_111:596"
-                            />
-                          </filter>
-                          <radialGradient
-                            id="paint0_radial_111:596"
-                            cx="0"
-                            cy="0"
-                            r="1"
-                            gradientUnits="userSpaceOnUse"
-                            gradientTransform="translate(37.5 37.5) rotate(90) scale(40.2574)"
-                          >
-                            <stop stopOpacity="0.47" />
-                            <stop offset="1" stopOpacity="0" />
-                          </radialGradient>
-                        </defs>
-                      </svg>
-                    </span>
-                  </div>
+
+                  {
+                    content.map(({heading, description}, ind)=>(
+                    <div className="my-5" key={ind}>
+                      <h4 className="font-xl mb-3 font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight">{heading}</h4>
+                      <p className="mb-8 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+                        {description}
+                      </p>
+                    </div>
+                    ))
+                  }
+
+                  {/* table context */}
+                    <TableContext data={tableData}/>
+                  {/* table context */}
+
                   <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    consectetur adipiscing elit in voluptate velit esse cillum
-                    dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                    mattis vulputate cupidatat.
+                  By using our platform, you agree to abide by these terms and conditions. For any questions or clarifications, please feel free to contact us.
                   </p>
-                  <div className="items-center justify-between sm:flex">
+                  {/* <div className="items-center justify-between sm:flex">
                     <div className="mb-5">
                       <h4 className="mb-3 text-sm font-medium text-body-color">
-                        Popular Tags :
+                        <Image src={"/images/terms/signature.png"} alt="" width={100} height={50}/>
+                        Vijay Nagar, Indore <br />
+                        Madhya Pradesh 452010
                       </h4>
-                      <div className="flex items-center">
-                        <TagButton text="Design" />
-                        <TagButton text="Development" />
-                        <TagButton text="Info" />
-                      </div>
                     </div>
                     <div className="mb-5">
                       <h5 className="mb-3 text-sm font-medium text-body-color sm:text-right">
-                        Share this post :
+                        <Image src={"/images/terms/certified.png"} alt="" width={120} height={100}/>
                       </h5>
-                      <div className="flex items-center sm:justify-end">
-                        <SharePost />
-                      </div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

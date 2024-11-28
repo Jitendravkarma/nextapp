@@ -28,21 +28,21 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
           <p className="mb-6 border-b border-body-color border-opacity-10 pb-6 text-base font-medium text-body-color dark:border-white dark:border-opacity-10">
             {paragraph}
           </p>
-          <div className="flex items-center justify-center">
-            <div className="mr-5 flex items-center border-r border-body-color border-opacity-10 pr-5 dark:border-white dark:border-opacity-10 xl:mr-3 xl:pr-3 2xl:mr-5 2xl:pr-5">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-0 items-center justify-center">
+            <div className="w-full md:w-auto mr-0 sm:mr-5 flex items-center border-r border-body-color border-opacity-10 pr-0 sm:pr-5 dark:border-white dark:border-opacity-10 xl:mr-3 xl:pr-3 2xl:mr-5 2xl:pr-5">
               <Link
                 href="https://webcrawlerspider.com/signup"
                 target="_blank"
-                className="rounded-sm bg-primary py-4 px-8 sm:p-4 lg:px-6 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
+                className="w-full md:w-auto text-center rounded-sm bg-primary py-4 px-8 sm:p-4 lg:px-6 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
               >
                 Try It Now
               </Link>
             </div>
-            <div className="inline-block">
+            <div className="inline-block w-full md:w-auto">
               <Link
                 href={videoURL}
                 target="_blank"
-                className="flex gap-2 items-center rounded-sm border py-4 px-8 sm:p-4 lg:px-6 text-base font-semibold text-black duration-300 ease-in-out hover:border-red-500"
+                className="flex gap-2 justify-center items-center text-center rounded-sm border py-4 px-8 sm:p-4 lg:px-6 text-base font-semibold text-black duration-300 ease-in-out hover:border-red-500"
               >
                 Watch on <FaYoutube className="text-red-500 text-2xl"/>
               </Link>

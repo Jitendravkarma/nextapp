@@ -12,11 +12,11 @@ const ContactForm = () => {
   const handleSubmit = (e)=>{
     e.preventDefault()
     if(supportForm.name && supportForm.email && supportForm.message){
-      console.log(supportForm)
-      alert(`Your query proceed successfully!`)
+      // console.log(supportForm)
+      alert(`Thank you for your query. We will update you soon.`)
     }
     else {
-      alert(`Missing details please fill all fields!`)
+      alert(`All fields are required. Please fill them out!`)
     }
   }
   return (

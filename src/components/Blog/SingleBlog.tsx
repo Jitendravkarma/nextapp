@@ -35,7 +35,7 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
                 target="_blank"
                 className="w-full md:w-auto text-center rounded-sm bg-primary py-4 px-8 sm:p-4 lg:px-6 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
               >
-                Try It Now
+                Try it now
               </Link>
             </div>
             <div className="inline-block w-full md:w-auto">

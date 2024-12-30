@@ -130,7 +130,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="/shipping-policy"
+                      href="/privacy-policy#privacy"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       Shipping Policy
@@ -138,7 +138,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="/cancellation-policy"
+                      href="/privacy-policy#privacy"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       Cancellation policy
@@ -146,7 +146,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="/refund-policy"
+                      href="/privacy-policy#privacy"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       Return and Refund Policy

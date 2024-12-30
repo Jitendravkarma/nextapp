@@ -1,11 +1,11 @@
 "use client";
 
-import Image from "next/image";
+// import Image from "next/image";
 import { useState } from "react";
 import SectionTitle from "../Common/SectionTitle";
 
-import ModalVideo from "react-modal-video";
-import { getImagePath } from "../image_basepath";
+// import ModalVideo from "react-modal-video";
+// import { getImagePath } from "../image_basepath";
 
 const Video = () => {
   const [isOpen, setOpen] = useState(false);
@@ -26,8 +26,8 @@ const Video = () => {
               className="mx-auto max-w-[770px] overflow-hidden rounded-md"
               data-wow-delay=".15s"
             >
-              <div className="relative aspect-[77/40] items-center justify-center">
-                <iframe height="400" src="https://www.youtube.com/embed/ZqcsxURdYxU?si=nVFhsXNDipYosGZE" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen className="w-full"></iframe>
+              <div className="relative md:aspect-[77/40] items-center justify-center">
+                <iframe src="https://www.youtube.com/embed/ZqcsxURdYxU?si=nVFhsXNDipYosGZE" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen className="w-full h-60 sm:h-72 md:h-96 lg:h-[26rem]"></iframe>
               </div>
             </div>
           </div>

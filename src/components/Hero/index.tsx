@@ -17,9 +17,9 @@ const Hero = () => {
                   Your Trusted Partner for <br /> Intelligent <span className="text-primary">Solutions</span>
                 </h1>
                 <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
-                <b>Neuralnetics Technology</b> Pvt provides a wide range of solutions designed to meet diverse business needs. Our scraping tools, offered under a dedicated product platform, showcase our commitment to delivering impactful and reliable services.
+                <b>Neuralnetics</b> Pvt provides a wide range of solutions designed to meet diverse business needs. Our scraping tools, offered under a dedicated product platform, showcase our commitment to delivering impactful and reliable services.
                 </p>
-                <div className="flex flex-wrap items-center justify-center sm:flex-row space-x-4 sm:space-y-0">
+                <div className="flex flex-col md:justify-center md:flex-row gap-3 sm:gap-4">
                   <Link
                     href="https://webcrawlerspider.com"
                     target="_blank"

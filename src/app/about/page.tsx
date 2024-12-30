@@ -15,7 +15,7 @@ const AboutPage = () => {
     <>
       <Breadcrumb
         pageName="About"
-        description="At Neuralnetics Technology Pvt, we're committed to delivering quality products and exceptional service."
+        description="At Neuralnetics Pvt, we're committed to delivering quality products and exceptional service."
       />
       <AboutSectionTwo />
     </>
